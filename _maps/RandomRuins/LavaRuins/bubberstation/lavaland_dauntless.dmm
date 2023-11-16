@@ -3698,11 +3698,6 @@
 /turf/closed/wall/mineral/plastitanium/explosive,
 /area/ruin/space/has_grav/bubbers/dauntless/service/freezer)
 "ud" = (
-/obj/structure/shipping_container/donk_co{
-	desc = "A standard-measure shipping container for bulk transport of goods. This one is from Donk Co. and so could be carrying just about anything- although it seems this one is overflowing with little Syndicate Figurines, known for being sold at a Loss.";
-	pixel_x = -17;
-	pixel_y = 15
-	},
 /obj/effect/turf_decal/stripes/red/corner,
 /turf/open/floor/plating/elevatorshaft,
 /area/ruin/space/has_grav/bubbers/dauntless/cargo)
