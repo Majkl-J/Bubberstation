@@ -1,0 +1,44 @@
+@use 'sass:color';
+@use 'sass:meta';
+
+@use '../colors.scss' with (
+  $primary: #397439,
+  $fg-map-keys: (),
+  $bg-map-keys: (),
+);
+@use '../base.scss' with (
+  $color-bg: #550202,
+  $color-bg-grad-spread: 6%,
+);
+
+.theme_syndicate_window {
+  background-color: #550202;
+}
+
+.theme_syndicate_menu {
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  height: 95%;
+  margin: 2.5%;
+  font-family: ui-sans-serif;
+
+  @include meta.load-css(
+    '../components/Button.scss',
+    $with: (
+      'color-default': #77bd5d,
+      'color-disabled': #363636,
+      'color-selected': #9d0808,
+      'color-caution': #be6209,
+      'color-danger': #9a9d00
+    )
+  );
+
+  .Button {
+    background-color: #77bd5d;
+    outline: base.em(2px) outset #559d3d;
+  }
+
+  .Button:hover {
+    background-color: #00ff00;
+    transition: 0.5s;
+  }
+}
