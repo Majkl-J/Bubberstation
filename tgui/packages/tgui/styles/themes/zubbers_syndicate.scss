@@ -12,14 +12,17 @@
 );
 
 .theme_syndicate_window {
-  background-color: #550202;
+  .Layout__content {
+    background-color: #550202;
+    background-image: none;
+  }
 }
 
 .theme_syndicate_menu {
   background-color: rgba($color: #000000, $alpha: 0.4);
   height: 95%;
   margin: 2.5%;
-  font-family: ui-sans-serif;
+  color: #161613;
 
   @include meta.load-css(
     '../components/Button.scss',
@@ -33,12 +36,30 @@
   );
 
   .Button {
-    background-color: #77bd5d;
-    outline: base.em(2px) outset #559d3d;
+    background-color: #c2c2c2;
+    margin-top: 2%;
   }
 
   .Button:hover {
     background-color: #00ff00;
     transition: 0.5s;
+  }
+
+  .theme_syndicate_button_folder {
+    @extend .Button;
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 25%;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .theme_syndicate_button_folder {
+    @extend .Button:hover;
+    padding-bottom: 2%;
+  }
+
+  .theme_syndicate_folder_buttons {
+    max-height: 2%;
   }
 }
