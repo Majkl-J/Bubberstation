@@ -1,3 +1,4 @@
+import { classes } from 'common/react';
 import { Window } from 'tgui/layouts';
 import { Button } from '../components';
 
@@ -10,17 +11,32 @@ export const ZubbersSyndicateTrade = (props, context) => {
       title={'Syndicate Trade Network'}
       width={600}
       height={600}
-      class="theme_syndicate_window">
+      class="theme_syndicate_window"
+      theme="syndicate">
       <Window.Content>
         <div class="theme_syndicate_menu">
           <div class="theme_syndicate_folder">
-            <div class="theme_syndicate_folder_buttons">
-              <Button class="theme_syndicate_button_folder">TEST MENU 1</Button>
-              <Button class="theme_syndicate_button_folder">TEST MENU 2</Button>
+            <div>
+              <FolderButton>UNSELECTED</FolderButton>
+              <FolderButton folder_selected={true}>SELECTED MENU</FolderButton>
             </div>
           </div>
         </div>
       </Window.Content>
     </Window>
+  );
+};
+
+export const FolderButton = (props) => {
+  const { children, folder_selected, assigned_folder } = props;
+  return (
+    <Button
+      className={classes([
+        'syndicate_mbutton',
+        folder_selected && 'syndicate_mbutton--selected',
+        !folder_selected && 'syndicate_mbutton--unselected',
+      ])}>
+      {children}
+    </Button>
   );
 };

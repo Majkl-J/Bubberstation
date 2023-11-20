@@ -12,9 +12,11 @@
 );
 
 .theme_syndicate_window {
-  .Layout__content {
-    background-color: #550202;
-    background-image: none;
+  .Window__content {
+    .Layout__content {
+      background-color: #550202;
+      background-image: url(../../assets/bg-syndicate.svg);
+    }
   }
 }
 
@@ -27,9 +29,9 @@
   @include meta.load-css(
     '../components/Button.scss',
     $with: (
-      'color-default': #77bd5d,
-      'color-disabled': #363636,
-      'color-selected': #9d0808,
+      'color-default': #c2c2c2,
+      'color-disabled': #707070,
+      'color-selected': #a03636,
       'color-caution': #be6209,
       'color-danger': #9a9d00
     )
@@ -38,14 +40,17 @@
   .Button {
     background-color: #c2c2c2;
     margin-top: 2%;
+    margin-right: 1%;
+    border-radius: 0px;
+    outline: base.em(2px) outset #c3c3c3;
   }
 
   .Button:hover {
-    background-color: #00ff00;
-    transition: 0.5s;
+    background-color: #00ad2e;
+    transition: 0.1s;
   }
 
-  .theme_syndicate_button_folder {
+  .syndicate_mbutton {
     @extend .Button;
     padding-left: 4%;
     padding-right: 4%;
@@ -54,12 +59,18 @@
     font-size: 12px;
   }
 
-  .theme_syndicate_button_folder {
-    @extend .Button:hover;
-    padding-bottom: 2%;
+  .syndicate_mbutton--unselected {
+    background-color: #a03636;
+    outline: base.em(2px) outset #902626;
   }
 
-  .theme_syndicate_folder_buttons {
-    max-height: 2%;
+  .syndicate_mbutton--selected {
+    background-color: #00ad2e;
+    outline: base.em(2px) outset #008d00;
+    transition: 0.1s;
+  }
+
+  .syndicate_mbutton--selected:hover {
+    background-color: #00cd3e;
   }
 }
