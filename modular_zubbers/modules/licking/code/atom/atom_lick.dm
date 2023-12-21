@@ -1,8 +1,8 @@
 /atom
-	lick_taste = "The fabric of reality"
+	var/lick_taste = "The fabric of reality"
 
 
-/atom/proc/lick(mob/user)
+/atom/proc/lickxamine(mob/user)
 	var/lick_string = get_lick_string(user, thats = TRUE)
 	if(lick_string)
 		. = list("[lick_string].", EXAMINE_SECTION_BREAK) // SKYRAT EDIT CHANGE
@@ -75,7 +75,7 @@
 	return
 
 
-/atom/proc/ShiftClick(mob/user)
+/atom/ShiftClick(mob/user)
 	var/flags = SEND_SIGNAL(user, COMSIG_CLICK_SHIFT, src)
 	if(flags & COMSIG_MOB_CANCEL_CLICKON)
 		return

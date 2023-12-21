@@ -29,12 +29,12 @@
 			if(!length(result))
 				result += span_notice("<i>You examine [examinify] closer, but find nothing of interest...</i>")
 		else
-			result = examinify.examine(src)
+			result = examinify.lickxamine(src)
 			client.recent_examines[ref_to_atom] = world.time // set to when we last normal examine'd them
 			addtimer(CALLBACK(src, PROC_REF(clear_from_recent_examines), ref_to_atom), RECENT_EXAMINE_MAX_WINDOW)
 			handle_eye_contact(examinify)
 	else
-		result = examinify.examine(src) // if a tree is examined but no client is there to see it, did the tree ever really exist?
+		result = examinify.lickxamine(src) // if a tree is examined but no client is there to see it, did the tree ever really exist?
 
 	//SKYRAT EDIT CHANGE
 	if(result.len)
