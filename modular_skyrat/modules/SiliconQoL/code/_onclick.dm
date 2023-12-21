@@ -36,7 +36,7 @@
 		A.AIAltClick(src)
 
 /atom/proc/AIExamine() // Used for AI specific examines .Currently only employed to stop door examines.
-	usr.examinate(src)
+	usr.lick(src)
 
 // Should keep all AI Examines in here in a list.
 /obj/machinery/door/airlock/AIExamine() // Lets not spam the AI with door examinations

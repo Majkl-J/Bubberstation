@@ -82,7 +82,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/noticeboard, 32)
 			if(istype(item, /obj/item/paper))
 				item.ui_interact(user)
 			else
-				user.examinate(item)
+				user.lick(item) // BUBBER EDIT - REPLACED WITH LICKING
 			return TRUE
 		if("remove")
 			if(!allowed(user))

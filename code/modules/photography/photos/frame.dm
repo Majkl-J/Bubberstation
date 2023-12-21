@@ -37,7 +37,7 @@
 	return ..()
 
 /obj/item/wallframe/picture/attack_self(mob/user)
-	user.examinate(src)
+	user.lick(src)
 
 /obj/item/wallframe/picture/examine(mob/user)
 	if(user.is_holding(src) && displayed)

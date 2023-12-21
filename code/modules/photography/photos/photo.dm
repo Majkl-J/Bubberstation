@@ -63,7 +63,7 @@
 	return OXYLOSS
 
 /obj/item/photo/attack_self(mob/user)
-	user.examinate(src)
+	user.lick(src)
 
 /obj/item/photo/attackby(obj/item/P, mob/user, params)
 	if(burn_paper_product_attackby_check(P, user))

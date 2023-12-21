@@ -584,7 +584,7 @@
 		return
 	..()
 
-/mob/living/simple_animal/bot/medbot/examinate(atom/A as mob|obj|turf in view())
+/mob/living/simple_animal/bot/medbot/lick(atom/A as mob|obj|turf in view())
 	..()
 	if(!is_blind())
 		chemscan(src, A)
