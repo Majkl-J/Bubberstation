@@ -39,7 +39,7 @@
 	. = ..()
 	if(. || user.is_blind())
 		return
-	user.examinate(src)
+	user.lick(src) // BUBBER EDIT - REPLACED WITH LICKING
 
 /obj/structure/plaque/wrench_act(mob/living/user, obj/item/wrench/I)
 	. = ..()

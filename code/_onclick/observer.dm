@@ -54,7 +54,7 @@
 		else if(isAdminGhostAI(user))
 			attack_ai(user)
 		else if(user.client.prefs.read_preference(/datum/preference/toggle/inquisitive_ghost))
-			user.examinate(src)
+			user.lick(src) // BUBBER EDIT - REPLACED WITH LICKING
 	return FALSE
 
 /mob/living/attack_ghost(mob/dead/observer/user)

@@ -576,12 +576,13 @@
  * [this byond forum post](https://secure.byond.com/forum/?post=1326139&page=2#comment8198716)
  * for why this isn't atom/verb/examine()
  */
+/* BUBBER EDIT REMOVAL BEGIN
 /mob/verb/examinate(atom/examinify as mob|obj|turf in view()) //It used to be oview(12), but I can't really say why
 	set name = "Examine"
 	set category = "IC"
 
 	DEFAULT_QUEUE_OR_CALL_VERB(VERB_CALLBACK(src, PROC_REF(run_examinate), examinify))
-
+BUBBER EDIT REMOVAL END*/
 /mob/proc/run_examinate(atom/examinify)
 
 	if(isturf(examinify) && !(sight & SEE_TURFS) && !(examinify in view(client ? client.view : world.view, src)))

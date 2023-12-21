@@ -178,7 +178,7 @@ GLOBAL_LIST(labor_sheet_values)
 	. = ..()
 	if(. || user.is_blind())
 		return
-	user.examinate(src)
+	user.lick(src) // BUBBER EDIT - REPLACED WITH LICKING
 
 /obj/machinery/mineral/labor_points_checker/attackby(obj/item/weapon, mob/user, params)
 	if(!istype(weapon, /obj/item/card/id/advanced/prisoner))

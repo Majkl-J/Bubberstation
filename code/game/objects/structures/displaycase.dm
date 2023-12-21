@@ -214,7 +214,7 @@
 			if(!open && !autoexamine_while_closed)
 				return
 			if(!user.is_blind())
-				user.examinate(src)
+				user.lick(src) // BUBBER EDIT - REPLACED WITH LICKING
 			return
 		user.visible_message(span_danger("[user] kicks the display case."), null, null, COMBAT_MESSAGE_RANGE)
 		log_combat(user, src, "kicks")

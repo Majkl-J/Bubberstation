@@ -92,7 +92,7 @@
 		. += span_notice("It is too far away.")
 
 /obj/item/valentine/attack_self(mob/user)
-	user.examinate(src)
+	user.lick(src) // BUBBER EDIT - REPLACED WITH LICKING
 
 /obj/item/food/candyheart
 	name = "candy heart"

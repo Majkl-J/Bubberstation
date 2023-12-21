@@ -1084,7 +1084,7 @@
 		set_seed(null)
 	else
 		if(user)
-			user.examinate(src)
+			user.lick(src) // BUBBER EDIT - REPLACED WITH LICKING
 
 /obj/machinery/hydroponics/CtrlClick(mob/user)
 	. = ..()
