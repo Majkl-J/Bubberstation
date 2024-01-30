@@ -7,3 +7,12 @@
 
 	dimension_x = 45
 	dimension_y = 34
+
+/datum/sprite_accessory/wings/mammal/ryvamon
+	name = "Ryvamon wings"
+	icon = 'modular_zubbers/modules/customization/icons/wings.dmi'
+	icon_state = "ryvamon"
+	color_src = USE_MATRIXED_COLORS
+	relevent_layers = list(BODY_BEHIND_LAYER, BODY_FRONT_LAYER)
+	dimension_x = 32
+	dimension_y = 32
