@@ -141,33 +141,3 @@
 	restricted_roles |= list(
 		JOB_SECURITY_MEDIC,
 	)
-
-/datum/loadout_item/under/miscellaneous/redscrubs/New()
-	. = ..()
-	restricted_roles |= list(
-		JOB_SECURITY_MEDIC,
-	)
-
-/datum/loadout_item/under/miscellaneous/bluescrubs/New()
-	. = ..()
-	restricted_roles |= list(
-		JOB_SECURITY_MEDIC,
-	)
-
-/datum/loadout_item/under/miscellaneous/greenscrubs/New()
-	. = ..()
-	restricted_roles |= list(
-		JOB_SECURITY_MEDIC,
-	)
-
-/datum/loadout_item/under/miscellaneous/purplescrubs/New()
-	. = ..()
-	restricted_roles |= list(
-		JOB_SECURITY_MEDIC,
-	)
-
-/datum/loadout_item/under/miscellaneous/whitescrubs/New()
-	. = ..()
-	restricted_roles |= list(
-		JOB_SECURITY_MEDIC,
-	)
