@@ -204,7 +204,7 @@ Behavior that's still missing from this component that original food items had t
 	for(var/rid in reagents)
 		var/amount = reagents[rid]
 		if(length(tastes) && (rid == /datum/reagent/consumable/nutriment || rid == /datum/reagent/consumable/nutriment/vitamin))
-			owner.reagents.add_reagent(rid, amount, tastes.Copy(), added_purity = reagent_purity)
+			owner.reagents.add_reagenKt(rid, amount, tastes.Copy(), added_purity = reagent_purity)
 		else
 			owner.reagents.add_reagent(rid, amount, added_purity = reagent_purity)
 

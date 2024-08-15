@@ -199,6 +199,19 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	icon_state = icon_off
 	inhand_icon_state = inhand_icon_off
 
+	AddComponent(/datum/component/edible,\
+		initial_reagents = reagents,\
+		food_flags = 0,\
+		foodtypes = JUNKFOOD,\
+		volume = reagents.maximum_volume,\
+		eat_time = 0 SECONDS,\
+		tastes = list("a never before experienced flavour"),\
+		eatverbs = null,\
+		bite_consumption = reagents.maximum_volume,\
+		junkiness = 2,\
+		reagent_purity = null,\
+	)
+
 /obj/item/cigarette/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	QDEL_NULL(mob_smoke)
@@ -214,6 +227,13 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	RegisterSignal(equipee, COMSIG_ATOM_DIR_CHANGE, PROC_REF(on_mob_dir_change))
 	if(lit && iscarbon(loc))
 		make_mob_smoke(loc)
+
+/obj/item/cigarette/examine(mob/user)
+	. = ..()
+	if(!is_species(user, /datum/species/human))
+		. += span_warning("You are curious to taste it.")
+
+/obj/item/cigarette
 
 /obj/item/cigarette/dropped(mob/dropee)
 	. = ..()
