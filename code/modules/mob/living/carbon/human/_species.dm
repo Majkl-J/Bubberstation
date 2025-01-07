@@ -2203,6 +2203,7 @@ GLOBAL_LIST_EMPTY(features_by_species)
 		var/obj/item/bodypart/leg/left/l_leg = new_species.bodypart_overrides[BODY_ZONE_L_LEG]
 		if(l_leg)
 			final_bodypart_overrides[BODY_ZONE_L_LEG] = initial(l_leg.digitigrade_type)
+		bodypart_overrides = final_bodypart_overrides // Surely this will cause no issues
 		// SKYRAT EDIT END
 
 	for(var/obj/item/bodypart/old_part as anything in target.bodyparts)
