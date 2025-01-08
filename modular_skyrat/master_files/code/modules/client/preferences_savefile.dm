@@ -259,7 +259,7 @@
 		)
 		var/list/save_languages = save_data["languages"]
 		for(var/language in save_languages)
-			languages[language] = language_number_updates[save_languages[language] + 1]// fuck you indexing from 1
+			languages[language] = language_number_updates[save_languages[language]]
 
 	if(current_version < VERSION_LOADOUT_PRESETS)
 		write_preference(GLOB.preference_entries[/datum/preference/loadout], list("Default" = save_data["loadout_list"])) // So easy. I wish the synth refactor was this easy.
